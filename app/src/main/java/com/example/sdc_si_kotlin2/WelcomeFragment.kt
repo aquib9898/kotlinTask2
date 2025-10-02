@@ -20,8 +20,8 @@ class WelcomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val loginBtn: MaterialButton = view.findViewById(R.id.btn_welcome_login)
-        val registerBtn: MaterialButton = view.findViewById(R.id.btn_welcome_register)
+        val loginBtn: MaterialButton = view.findViewById(R.id.btn_bottom_login)
+        val registerBtn: MaterialButton = view.findViewById(R.id.btn_bottom_register)
 
         loginBtn.setOnClickListener {
             parentFragmentManager.beginTransaction()
