@@ -14,14 +14,12 @@ class RegisterFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_register, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Navigate back to LoginFragment when "Login here" is clicked
         val loginHereLink: TextView = view.findViewById(R.id.tv_login_link)
         loginHereLink.setOnClickListener {
             parentFragmentManager.beginTransaction()
