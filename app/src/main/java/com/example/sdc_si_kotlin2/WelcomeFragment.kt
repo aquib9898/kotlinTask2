@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.google.android.material.button.MaterialButton
 
@@ -21,7 +22,7 @@ class WelcomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val loginBtn: MaterialButton = view.findViewById(R.id.btn_bottom_login)
-        val registerBtn: MaterialButton = view.findViewById(R.id.btn_bottom_register)
+        val registerLink: TextView = view.findViewById(R.id.tv_bottom_register)
 
         loginBtn.setOnClickListener {
             parentFragmentManager.beginTransaction()
@@ -30,7 +31,7 @@ class WelcomeFragment : Fragment() {
                 .commit()
         }
 
-        registerBtn.setOnClickListener {
+        registerLink.setOnClickListener {
             parentFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, RegisterFragment())
                 .addToBackStack(null)

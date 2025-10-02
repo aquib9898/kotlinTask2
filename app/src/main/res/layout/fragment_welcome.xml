@@ -54,7 +54,7 @@
                 android:id="@+id/tv_box_sub"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Explore all existing job roles based on your skills and preferences."
+                android:text="Explore all existing job roles based on your interest and study major"
                 android:textColor="#2B2B2B"
                 android:textSize="14sp"
                 android:gravity="center"
@@ -90,19 +90,19 @@
                 android:layout_width="8dp"
                 android:layout_height="match_parent" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_bottom_register"
+            <TextView
+                android:id="@+id/tv_bottom_register"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:text="Register"
-                android:textColor="#2F5AF5"
+                android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:backgroundTint="@android:color/transparent"
-                app:cornerRadius="8dp"/>
+                android:clickable="true"
+                android:focusable="true"/>
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
-
