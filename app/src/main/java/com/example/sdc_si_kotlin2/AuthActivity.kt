@@ -10,14 +10,12 @@ class AuthActivity : AppCompatActivity(R.layout.activity_auth) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
+        // Load WelcomeFragment when activity starts
         if (savedInstanceState == null) {
             supportFragmentManager.commit {
                 setReorderingAllowed(true)
-                add<LoginFragment>(R.id.fragment_container)
+                add<WelcomeFragment>(R.id.fragment_container)
             }
         }
     }
 }
-
-
