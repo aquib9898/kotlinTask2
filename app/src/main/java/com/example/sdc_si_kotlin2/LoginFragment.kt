@@ -6,13 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 
 class LoginFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         return inflater.inflate(R.layout.fragment_login, container, false)
     }
@@ -22,10 +23,7 @@ class LoginFragment : Fragment() {
 
         val createAccountLink: TextView = view.findViewById(R.id.tv_create_account_link)
         createAccountLink.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, RegisterFragment())
-                .addToBackStack(null)
-                .commit()
+            findNavController().navigate(R.id.action_login_to_register)
         }
     }
 }

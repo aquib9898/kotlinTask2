@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 
 class RegisterFragment : Fragment() {
 
@@ -22,10 +23,7 @@ class RegisterFragment : Fragment() {
 
         val loginHereLink: TextView = view.findViewById(R.id.tv_login_link)
         loginHereLink.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, LoginFragment())
-                .addToBackStack(null)
-                .commit()
+            findNavController().navigate(R.id.action_register_to_login)
         }
     }
 }

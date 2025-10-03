@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.button.MaterialButton
 
 class WelcomeFragment : Fragment() {
@@ -25,17 +26,11 @@ class WelcomeFragment : Fragment() {
         val registerLink: TextView = view.findViewById(R.id.tv_bottom_register)
 
         loginBtn.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, LoginFragment())
-                .addToBackStack(null)
-                .commit()
+            findNavController().navigate(R.id.action_welcome_to_login)
         }
 
         registerLink.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, RegisterFragment())
-                .addToBackStack(null)
-                .commit()
+            findNavController().navigate(R.id.action_welcome_to_register)
         }
     }
 }
